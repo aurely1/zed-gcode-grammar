@@ -1,0 +1,119 @@
+( This is a fragment of a program made only for parser testing purposes )
+( Source: https://github.com/LinuxCNC/linuxcnc/blob/master/nc_files/3D_Chips.ngc )
+
+( With scales factors set at 1.0, the part is cut from a 100x100x50mm )
+( block with the zero point at the center top of the block )
+( and Cutter is assumed to be a 10mm ball nose )
+( and feedrate is 450 mm/min )
+
+#<xscale> = 1.0
+#<yscale> = 1.0
+#<zscale> = 1.0
+#<fscale> = 10000.0
+#<toolno> = 1
+#<rpm>    = 1600
+
+N30 G21
+N40G90
+G64P.1
+N50T#<toolno>M6
+N60M8
+N70S#<rpm>M3
+N90G0Z[#<zscale>*10.]
+N80G0X[#<xscale>*53.]Y[#<yscale>*-56.128]
+N100G1Z[#<zscale>*-25.372]F[#<fscale>*100]
+N110G1Z[#<zscale>*-27.372]F[#<fscale>*225]
+N120Y[#<yscale>*-56.12]Z[#<zscale>*-27.725]
+N130Y[#<yscale>*-56.105]Z[#<zscale>*-27.894]
+N140Y[#<yscale>*-56.06]Z[#<zscale>*-28.152]
+N150Y[#<yscale>*-56.051]Z[#<zscale>*-28.184]
+N160Y[#<yscale>*-55.992]Z[#<zscale>*-28.405]
+N170Y[#<yscale>*-55.902]Z[#<zscale>*-28.651]
+N180Y[#<yscale>*-55.792]Z[#<zscale>*-28.888]
+N190Y[#<yscale>*-55.661]Z[#<zscale>*-29.115]
+N200Y[#<yscale>*-55.511]Z[#<zscale>*-29.329]
+N210Y[#<yscale>*-55.343]Z[#<zscale>*-29.53]
+N220Y[#<yscale>*-55.158]Z[#<zscale>*-29.715]
+N230Y[#<yscale>*-54.957]Z[#<zscale>*-29.883]
+N240Y[#<yscale>*-54.743]Z[#<zscale>*-30.033]
+N250Y[#<yscale>*-54.516]Z[#<zscale>*-30.164]
+N260Y[#<yscale>*-54.279]Z[#<zscale>*-30.274]
+N270Y[#<yscale>*-54.033]Z[#<zscale>*-30.364]
+N280Y[#<yscale>*-53.78]Z[#<zscale>*-30.432]
+N290Y[#<yscale>*-53.522]Z[#<zscale>*-30.477]
+N300Y[#<yscale>*-53.31]Z[#<zscale>*-30.496]
+N310Y[#<yscale>*-53.262]Z[#<zscale>*-30.5]
+N320Y[#<yscale>*-53.]
+N330Y[#<yscale>*-47.891]F[#<fscale>*450]
+N340Y[#<yscale>*-19.891]
+N350Y[#<yscale>*-13.891]
+N360Y[#<yscale>*0.109]
+N370Y[#<yscale>*16.109]
+N380Y[#<yscale>*18.109]
+N390Y[#<yscale>*25.109]
+N400Y[#<yscale>*32.109]
+N410Y[#<yscale>*44.109]
+N420Y[#<yscale>*53.]
+N430X[#<xscale>*52.972]Y[#<yscale>*53.293]
+N440X[#<xscale>*52.893]Y[#<yscale>*53.547]
+N450X[#<xscale>*52.769]Y[#<yscale>*53.762]
+N460X[#<xscale>*52.609]Y[#<yscale>*53.937]
+N470X[#<xscale>*52.42]Y[#<yscale>*54.074]
+N480X[#<xscale>*52.209]Y[#<yscale>*54.172]
+N490X[#<xscale>*51.983]Y[#<yscale>*54.23]
+N500X[#<xscale>*51.75]Y[#<yscale>*54.25]
+N510X[#<xscale>*51.517]Y[#<yscale>*54.23]
+N520X[#<xscale>*51.291]Y[#<yscale>*54.172]
+N530X[#<xscale>*51.08]Y[#<yscale>*54.074]
+N540X[#<xscale>*50.891]Y[#<yscale>*53.937]
+N550X[#<xscale>*50.731]Y[#<yscale>*53.762]
+N560X[#<xscale>*50.607]Y[#<yscale>*53.547]
+N570X[#<xscale>*50.528]Y[#<yscale>*53.293]
+N580X[#<xscale>*50.5]Y[#<yscale>*53.]
+N590Y[#<yscale>*34.738]
+N600Y[#<yscale>*18.738]
+N610Y[#<yscale>*14.738]
+N620Y[#<yscale>*2.738]
+N630Y[#<yscale>*-1.262]
+N640Y[#<yscale>*-19.262]
+N650Y[#<yscale>*-29.262]
+N660Y[#<yscale>*-52.262]
+N670Y[#<yscale>*-53.]
+N680X[#<xscale>*50.472]Y[#<yscale>*-53.293]
+N690X[#<xscale>*50.393]Y[#<yscale>*-53.547]
+N700X[#<xscale>*50.269]Y[#<yscale>*-53.762]
+N710X[#<xscale>*50.109]Y[#<yscale>*-53.938]
+N720X[#<xscale>*49.92]Y[#<yscale>*-54.074]
+N730X[#<xscale>*49.709]Y[#<yscale>*-54.172]
+N740X[#<xscale>*49.483]Y[#<yscale>*-54.23]
+N750X[#<xscale>*49.251]Y[#<yscale>*-54.25]
+N760X[#<xscale>*49.017]Y[#<yscale>*-54.23]
+N770X[#<xscale>*48.791]Y[#<yscale>*-54.172]
+N780X[#<xscale>*48.58]Y[#<yscale>*-54.074]
+N790X[#<xscale>*48.391]Y[#<yscale>*-53.938]
+N800X[#<xscale>*48.231]Y[#<yscale>*-53.762]
+N810X[#<xscale>*48.107]Y[#<yscale>*-53.547]
+N820X[#<xscale>*48.028]Y[#<yscale>*-53.293]
+N830X[#<xscale>*48.]Y[#<yscale>*-53.]
+N840Y[#<yscale>*-47.225]
+N850Y[#<yscale>*-38.225]
+N860Y[#<yscale>*-36.225]
+N870Y[#<yscale>*-32.725]
+N880Y[#<yscale>*-32.288]
+N890Y[#<yscale>*-32.241]
+N900Y[#<yscale>*-32.225]
+N910Y[#<yscale>*-31.733]
+N920Y[#<yscale>*-31.725]
+N930Y[#<yscale>*-31.538]
+N940Y[#<yscale>*-31.452]
+N950Y[#<yscale>*-31.444]Z[#<zscale>*-7.922]
+N960Y[#<yscale>*56.11]Z[#<zscale>*-27.838]
+N970Y[#<yscale>*56.128]Z[#<zscale>*-27.634]
+N980G0Z[#<zscale>*10.]
+N990M9
+N1000M2
+
+
+
+
+
